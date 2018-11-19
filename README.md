@@ -5,25 +5,25 @@ remind all the basics you’ve learned during the piscine. Functions, loops, poi
 
 *Contents*
 ---
-⋅⋅* I Foreword
+1. I Foreword
 ⋅⋅* II Introduction
 ⋅⋅* III General rules
 ---
 ## How I do this?
 ---
 ⋅⋅* IV Exercise 00 : Oh yeah, mooore...
-```
-$> ls -l
-total 42
-drwx--xr-x  2 login  wheel  XX Jun  1 20:47 test0
--rwx--xr--  1 login  wheel   4 Jun  1 21:46 test1
-dr-x---r--  2 login  wheel  XX Jun  1 22:45 test2
--r-----r--  2 login  wheel   1 Jun  1 23:44 test3
--rw-r----x  1 login  wheel   2 Jun  1 23:43 test4
--r-----r--  2 login  wheel   1 Jun  1 23:44 test5
-lrwxr-xr-x  1 login  wheel   5 Jun  1 22:20 test6 -> test0
-$>
-```
+
+> $> ls -l
+> total 42
+> drwx--xr-x  2 login  wheel  XX Jun  1 20:47 test0
+> -rwx--xr--  1 login  wheel   4 Jun  1 21:46 test1
+> dr-x---r--  2 login  wheel  XX Jun  1 22:45 test2
+> -r-----r--  2 login  wheel   1 Jun  1 23:44 test3
+> -rw-r----x  1 login  wheel   2 Jun  1 23:43 test4
+> -r-----r--  2 login  wheel   1 Jun  1 23:44 test5
+> lrwxr-xr-x  1 login  wheel   5 Jun  1 22:20 test6 -> test0
+> $>
+
 
 ```touch -h -t "06012220" test6```
 
