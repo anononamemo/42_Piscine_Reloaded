@@ -5,13 +5,13 @@ remind all the basics you’ve learned during the piscine. Functions, loops, poi
 
 *Contents*
 ---
-1. I Foreword
-⋅⋅* II Introduction
-⋅⋅* III General rules
+I Foreword
+II Introduction
+ III General rules
 ---
 ## How I do this?
 ---
-⋅⋅* IV Exercise 00 : Oh yeah, mooore...
+IV Exercise 00 : Oh yeah, mooore...
 
 > $> ls -l
 > total 42
