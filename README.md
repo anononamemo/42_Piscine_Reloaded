@@ -46,7 +46,18 @@ $>
 >             If the ``CC'' and ``YY'' letter pairs are not specified, the values default to the current year.  If the ``SS'' letter pair is not specified, the
 >             value defaults to 0.
 ### V Exercise 01 : Z
+`z
+`
 ### VI Exercise 02 : clean
+
+> In a file called clean place the command line that will search for all files - in the current directory as well as in its sub-directories - with a name ending by ~, or with a name that start and end by #
+> * The command line will show and erase all files found.
+> * Only one command is allowed: no ’;’ or ’&&’ or other shenanigans.
+
+You remember about -  `touch none{0..10}~` for create 10 file's
+
+
+
 ### VII Exercise 03 : find_sh
 ### VIII Exercise 04 : MAC
 ### IX Exercise 05 : Can you create it ?
