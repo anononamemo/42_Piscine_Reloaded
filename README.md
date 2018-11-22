@@ -25,7 +25,7 @@ dr-x---r--  2 login  wheel  XX Jun  1 22:45 test2
 lrwxr-xr-x  1 login  wheel   5 Jun  1 22:20 test6 -> test0
 $>
 ```
-
+---
 ```touch -h -t "06012220" test6```
 
 > Remember about -h 
@@ -54,9 +54,23 @@ $>
 > * The command line will show and erase all files found.
 > * Only one command is allowed: no ’;’ or ’&&’ or other shenanigans.
 
-You remember about -  `touch none{0..10}~` for create 10 file's
+1. You remember about -  `touch none{0..10}~` for create 10 file's
+2. `-name`
+> -name pattern
+>             True if the last component of the pathname being examined matches pattern.
+>             Special shell pattern matching characters (``['', ``]'', ``*'', and ``?'')
+>             may be used as part of pattern.  These characters may be matched explicitly
+>             by escaping them with a backslash (``\'').
 
-
+We will use next flags:
+`-print` - verbose output
+`-delete` - all	know about this, read this, for all information https://rtfm.co.ua/komanda-find-i-eyo-opcii-v-primerax/
+`-name` - input your find's name
+`-exec ls -l {} \;` - more
+`-o` - connection
+---
+Result:
+```find . -name "#*" -print -delete -o -name "*#" -delete -print -o -name "*~" -delete -print```
 
 ### VII Exercise 03 : find_sh
 ### VIII Exercise 04 : MAC
