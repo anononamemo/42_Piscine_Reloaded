@@ -73,6 +73,10 @@ $>
 > ```find . -name "#*" -print -delete -o -name "*#" -delete -print -o -name "*~" -delete -print```
 
 ### VII Exercise 03 : find_sh
+
+``` find . "*.sh" -print | awk -F "." '/.sh/{ print $2 }' | awk -F "/" '{ print $2 }' ```
+> man awk
+
 ### VIII Exercise 04 : MAC
 ### IX Exercise 05 : Can you create it ?
 ### X Exercise 06 : ft_print_alphabet
