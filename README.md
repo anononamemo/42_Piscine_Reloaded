@@ -62,15 +62,15 @@ $>
 >             may be used as part of pattern.  These characters may be matched explicitly
 >             by escaping them with a backslash (``\'').
 
-We will use next flags:
-`-print` - verbose output
-`-delete` - all	know about this, read this, for all information https://rtfm.co.ua/komanda-find-i-eyo-opcii-v-primerax/
-`-name` - input your find's name
-`-exec ls -l {} \;` - more
-`-o` - connection
+3. We will use next flags:
+> `-print` - verbose output
+> `-delete` - all	know about this, read this, for all information https://rtfm.co.ua/komanda-find-i-eyo-opcii-v-primerax/
+> `-name` - input your find's name
+> `-exec ls -l {} \;` - more
+> `-o` - connection
 ---
-Result:
-```find . -name "#*" -print -delete -o -name "*#" -delete -print -o -name "*~" -delete -print```
+4. Result:
+> ```find . -name "#*" -print -delete -o -name "*#" -delete -print -o -name "*~" -delete -print```
 
 ### VII Exercise 03 : find_sh
 ### VIII Exercise 04 : MAC
