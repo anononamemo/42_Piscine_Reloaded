@@ -5,10 +5,10 @@ void ft_putchar(char c)
   write(1, &c, 1);
 }
 
-void ft_print_alphabet(void)
+void ft_print_numbers(void)
 {
-  int i = 97;
-  while (i >= 97 && i <= 122)
+  int i = 48;
+  while (i >=47 && i <= 57)
     ft_putchar(i++);
   ft_putchar('\n');
 }

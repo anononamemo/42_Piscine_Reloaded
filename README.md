@@ -149,7 +149,52 @@ void ft_print_alphabet(void)
 ```
 
 ## XI Exercise 07 : ft_print_numbers
-## XII Exercise 03: ft_is_negative
+
+1. Task:
+
+> Create a function that displays all digits, on a single line, by ascending order.
+
+2. `man ascii`:
+
+```
+      48  0    49  1    50  2    51  3    52  4    53  5    54  6    55  7
+      56  8    57  9
+```
+
+---
+3. Result:
+
+``` c
+void ft_print_numbers(void)
+{
+  int i = 48;
+  while (i >=47 && i <= 57)
+    ft_putchar(i++);
+  ft_putchar('\n');
+}
+```
+
+## XII Exercise 08: ft_is_negative
+
+1. Task:
+
+> Create a function that displays ’N’ or ’P’ depending on the integer’s sign entered as a parameter. If n is negative, display ’N’. If n is positive or null, display ’P’.
+
+---
+2. Result:
+
+```c
+void ft_is_negative(int n)
+{
+  if (n < 0)
+    ft_putchar('N');
+  else if (n > 0)
+    ft_putchar('P');
+  else
+    ft_putchar('P');
+}
+```
+
 ## XIII Exercise 09 : ft_ft 
 ## XIV Exercise 10 : ft_swap
 ## XV Exercise 11 : ft_div_mod
