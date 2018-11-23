@@ -8,10 +8,7 @@ remind all the basics you’ve learned during the piscine. Functions, loops, poi
 ### I Foreword
 ### II Introduction
 ### III General rules
----
-## How I do this?
----
-### IV Exercise 00 : Oh yeah, mooore...
+## IV Exercise 00 : Oh yeah, mooore...
 
 1. Task:
 
@@ -51,7 +48,7 @@ $>
 
 ```touch -h -t "06012220" test6```
 
-### V Exercise 01 : Z
+## V Exercise 01 : Z
 
 ---
 1. Result:
@@ -59,7 +56,7 @@ $>
 `z[enter]
 `
 
-### VI Exercise 02 : clean
+## VI Exercise 02 : clean
 
 > In a file called clean place the command line that will search for all files - in the current directory as well as in its sub-directories - with a name ending by ~, or with a name that start and end by #
 > * The command line will show and erase all files found.
@@ -85,7 +82,7 @@ $>
 
 ```find . -name "#*" -print -delete -o -name "*#" -delete -print -o -name "*~" -delete -print```
 
-### VII Exercise 03 : find_sh
+## VII Exercise 03 : find_sh
 
 ---
 1. Result:
@@ -94,7 +91,7 @@ $>
 
 > `man awk`
 
-### VIII Exercise 04 : MAC
+## VIII Exercise 04 : MAC
 1. [I will use grep](http://aidalinux.ru/w/Grep)
 2. `man ifconfig`
 3. `man awk`
@@ -104,7 +101,7 @@ $>
 
 ```ifconfig en0 | grep ether -w | awk -F " " '{ print $2 }'```
 
-### IX Exercise 05 : Can you create it ?
+## IX Exercise 05 : Can you create it ?
 
 ---
 1. Result:
@@ -113,12 +110,15 @@ $>
 
 > p.s. Simple - `''` or `echo 42 > '"\?$*’KwaMe’*$?\"'`
 
-### X Exercise 06 : ft_print_alphabet
+## X Exercise 06 : ft_print_alphabet
 1. Task:
 
 > Create a function that displays the alphabet in lowercase, on a single line, by ascending order, starting from the letter ’a’.
 
 2. Classic
+
+> This function is easier to enter, that would constantly use.
+> void - is NONE type, func - return NONE, but put `char` character
 
 ```c
 void ft_putchar(char c)
@@ -126,6 +126,14 @@ void ft_putchar(char c)
   write(1, &c, 1);
 }
 ```
+2.1 `man ASCII`
+
+>      97  a    98  b    99  c   100  d   101  e   102  f   103  g
+>     104  h   105  i   106  j   107  k   108  l   109  m   110  n   111  o
+>     112  p   113  q   114  r   115  s   116  t   117  u   118  v   119  w
+>     120  x   121  y   122  z
+
+`(i >= 97 && i <= 122)` while i fits the condition
 
 ---
 3. Result:
@@ -140,28 +148,28 @@ void ft_print_alphabet(void)
 }
 ```
 
-### XI Exercise 07 : ft_print_numbers
-### XII Exercise 03: ft_is_negative
-### XIII Exercise 09 : ft_ft 
-### XIV Exercise 10 : ft_swap
-### XV Exercise 11 : ft_div_mod
-### XVI Exercise 12 : ft_iterative_factorial
-### XVII Exercise 13 : ft_recursive_factorial
-### XVIII Exercise 14 : ft_sqrt
-### XIX Exercise 15 : ft_putstr
-### XX Exercise 16 : ft_strlen
-### XXI Exercise 17 : ft_strcmp
-### XXII Exercise 18 : ft_print_params
-### XXIII Exercise 19 : ft_sort_params
-### XXIV Exercise 20 : ft_strdup
-### XXV Exercise 21 : ft_range
-### XXVI Exercise 22 : ft_abs.h
-### XXVIIExercise 23 : ft_point.h
-### XXVIIIExercise 24 : Makefile
-### XXIX Exercise 25 : ft_foreach
-### XXX Exercise 26 : ft_count_if
-### XXXI Exercise 27 : display_file
-### XXXIIRendu et peer-évaluation
+## XI Exercise 07 : ft_print_numbers
+## XII Exercise 03: ft_is_negative
+## XIII Exercise 09 : ft_ft 
+## XIV Exercise 10 : ft_swap
+## XV Exercise 11 : ft_div_mod
+## XVI Exercise 12 : ft_iterative_factorial
+## XVII Exercise 13 : ft_recursive_factorial
+## XVIII Exercise 14 : ft_sqrt
+## XIX Exercise 15 : ft_putstr
+## XX Exercise 16 : ft_strlen
+## XXI Exercise 17 : ft_strcmp
+## XXII Exercise 18 : ft_print_params
+## XXIII Exercise 19 : ft_sort_params
+## XXIV Exercise 20 : ft_strdup
+## XXV Exercise 21 : ft_range
+## XXVI Exercise 22 : ft_abs.h
+## XXVIIExercise 23 : ft_point.h
+## XXVIIIExercise 24 : Makefile
+## XXIX Exercise 25 : ft_foreach
+## XXX Exercise 26 : ft_count_if
+## XXXI Exercise 27 : display_file
+## XXXIIRendu et peer-évaluation
 ---
 CHEAT GIT
 
