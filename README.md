@@ -5,9 +5,6 @@ remind all the basics you’ve learned during the piscine. Functions, loops, poi
 
 *Contents*
 ---
-### I Foreword
-### II Introduction
-### III General rules
 ## IV Exercise 00 : Oh yeah, mooore...
 
 1. Task:
@@ -25,23 +22,25 @@ lrwxr-xr-x  1 login  wheel   5 Jun  1 22:20 test6 -> test0
 $>
 ```
 
-> Remember about -h 
+> *Remember about -h*
 
 2. `man touch` is reads
 
->-t      Change the access and modification times to the specified time instead of the current time of day.  The argument is of the form
->             ``[[CC]YY]MMDDhhmm[.SS]'' where each pair of letters represents the following:
->                   CC      The first two digits of the year (the century).
->                   YY      The second two digits of the year.  If ``YY'' is specified, but ``CC'' is not, a value for ``YY'' between 69 and 99 results in a ``CC''
->                           value of 19.  Otherwise, a ``CC'' value of 20 is used.
->                   MM      The month of the year, from 01 to 12.
->                   DD      the day of the month, from 01 to 31.
->                   hh      The hour of the day, from 00 to 23.
->                   mm      The minute of the hour, from 00 to 59.
->                   SS      The second of the minute, from 00 to 61.
->
->             If the ``CC'' and ``YY'' letter pairs are not specified, the values default to the current year.  If the ``SS'' letter pair is not specified, the
->             value defaults to 0.
+```
+-t      Change the access and modification times to the specified time instead of the current time of day.  The argument is of the form
+             ``[[CC]YY]MMDDhhmm[.SS]'' where each pair of letters represents the following:
+                   CC      The first two digits of the year (the century).
+                   YY      The second two digits of the year.  If ``YY'' is specified, but ``CC'' is not, a value for ``YY'' between 69 and 99 results in a ``CC''
+                           value of 19.  Otherwise, a ``CC'' value of 20 is used.
+                   MM      The month of the year, from 01 to 12.
+                   DD      the day of the month, from 01 to 31.
+                   hh      The hour of the day, from 00 to 23.
+                   mm      The minute of the hour, from 00 to 59.
+                   SS      The second of the minute, from 00 to 61.
+
+             If the ``CC'' and ``YY'' letter pairs are not specified, the values default to the current year.  If the ``SS'' letter pair is not specified, the
+             value defaults to 0.
+```
 
 ---
 3. Result:
@@ -126,14 +125,17 @@ void ft_putchar(char c)
   write(1, &c, 1);
 }
 ```
+
 2.1 `man ASCII`
 
->      97  a    98  b    99  c   100  d   101  e   102  f   103  g
->     104  h   105  i   106  j   107  k   108  l   109  m   110  n   111  o
->     112  p   113  q   114  r   115  s   116  t   117  u   118  v   119  w
->     120  x   121  y   122  z
+```
+      97  a    98  b    99  c   100  d   101  e   102  f   103  g
+     104  h   105  i   106  j   107  k   108  l   109  m   110  n   111  o
+     112  p   113  q   114  r   115  s   116  t   117  u   118  v   119  w
+     120  x   121  y   122  z
+```
 
-`(i >= 97 && i <= 122)` while i fits the condition
+> `(i >= 97 && i <= 122)` while i fits the condition
 
 ---
 3. Result:
@@ -196,6 +198,47 @@ void ft_is_negative(int n)
 ```
 
 ## XIII Exercise 09 : ft_ft 
+
+1. Task:
+
+> Create a function that takes a pointer to int as a parameter, and sets the value "42" to that int.
+
+2. About pointers:
+
+For check pointer, write program:
+
+```c 
+int main()
+{
+  int i	= 42;
+
+  ft_ft(&i);
+  return(0);
+}
+```
+
+Attention in terminal was:
+
+```
+ft_ft.c:14:9: warning: incompatible integer to pointer conversion passing 'int' to
+      parameter of type 'int *'; take the address with & [-Wint-conversion]
+  ft_ft(i);
+        ^
+        &
+```
+> This message was displayed, because we did not insert a pointer to the link
+
+---
+3. Result
+
+```c
+void ft_ft(int *nbr)
+{
+  int c;
+  c = *nbr;
+}
+```
+
 ## XIV Exercise 10 : ft_swap
 ## XV Exercise 11 : ft_div_mod
 ## XVI Exercise 12 : ft_iterative_factorial
