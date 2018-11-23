@@ -83,9 +83,15 @@ $>
 3. `man awk`
 
 ---
+4. Result:
 ```ifconfig en0 | grep ether -w | awk -F " " '{ print $2 }'```
----
+
 ### IX Exercise 05 : Can you create it ?
+1. Result:
+```touch '"\?$*’KwaMe’*$?\"'```
+
+> p.s. Simple - `''` or `echo 42 > '"\?$*’KwaMe’*$?\"'`
+
 ### X Exercise 06 : ft_print_alphabet
 ### XI Exercise 07 : ft_print_numbers
 ### XII Exercise 03: ft_is_negative
