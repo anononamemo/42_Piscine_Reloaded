@@ -13,6 +13,8 @@ remind all the basics you’ve learned during the piscine. Functions, loops, poi
 ---
 ### IV Exercise 00 : Oh yeah, mooore...
 
+1. Task:
+
 ```
 $> ls -l
 total 42
@@ -25,12 +27,10 @@ dr-x---r--  2 login  wheel  XX Jun  1 22:45 test2
 lrwxr-xr-x  1 login  wheel   5 Jun  1 22:20 test6 -> test0
 $>
 ```
----
-```touch -h -t "06012220" test6```
 
 > Remember about -h 
 
-`man touch` is reads
+2. `man touch` is reads
 
 >-t      Change the access and modification times to the specified time instead of the current time of day.  The argument is of the form
 >             ``[[CC]YY]MMDDhhmm[.SS]'' where each pair of letters represents the following:
@@ -45,9 +45,18 @@ $>
 >
 >             If the ``CC'' and ``YY'' letter pairs are not specified, the values default to the current year.  If the ``SS'' letter pair is not specified, the
 >             value defaults to 0.
+
+---
+3. Result:
+```touch -h -t "06012220" test6```
+
 ### V Exercise 01 : Z
-`z
+
+---
+1. Result
+`z[enter]
 `
+
 ### VI Exercise 02 : clean
 
 > In a file called clean place the command line that will search for all files - in the current directory as well as in its sub-directories - with a name ending by ~, or with a name that start and end by #
@@ -68,12 +77,15 @@ $>
 > `-name` - input your find's name
 > `-exec ls -l {} \;` - more
 > `-o` - connection
+
 ---
 4. Result:
 ```find . -name "#*" -print -delete -o -name "*#" -delete -print -o -name "*~" -delete -print```
 
 ### VII Exercise 03 : find_sh
 
+---
+1. Result:
 ``` find . "*.sh" -print | awk -F "." '/.sh/{ print $2 }' | awk -F "/" '{ print $2 }' ```
 > man awk
 
@@ -87,6 +99,8 @@ $>
 ```ifconfig en0 | grep ether -w | awk -F " " '{ print $2 }'```
 
 ### IX Exercise 05 : Can you create it ?
+
+---
 1. Result:
 ```touch '"\?$*’KwaMe’*$?\"'```
 
