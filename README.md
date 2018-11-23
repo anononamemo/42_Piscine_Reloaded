@@ -89,8 +89,10 @@ $>
 
 ---
 1. Result:
+
 ``` find . "*.sh" -print | awk -F "." '/.sh/{ print $2 }' | awk -F "/" '{ print $2 }' ```
-> man awk
+
+> `man awk`
 
 ### VIII Exercise 04 : MAC
 1. [I will use grep](http://aidalinux.ru/w/Grep)
