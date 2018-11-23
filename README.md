@@ -82,6 +82,9 @@ $>
 2. `man ifconfig`
 3. `man awk`
 
+---
+```ifconfig en0 | grep ether -w | awk -F " " '{ print $2 }'```
+---
 ### IX Exercise 05 : Can you create it ?
 ### X Exercise 06 : ft_print_alphabet
 ### XI Exercise 07 : ft_print_numbers
