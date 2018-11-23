@@ -219,7 +219,7 @@ int main()
 
 Attention in terminal was:
 
-```
+```bash
 ft_ft.c:14:9: warning: incompatible integer to pointer conversion passing 'int' to
       parameter of type 'int *'; take the address with & [-Wint-conversion]
   ft_ft(i);
@@ -240,6 +240,45 @@ void ft_ft(int *nbr)
 ```
 
 ## XIV Exercise 10 : ft_swap
+
+1. Task:
+
+> Create a function that swaps the value of two integers whose addresses are entered as parameters.
+
+> *Here’s how it should be prototyped:*
+> ``` void ft_swap(int *a, int *b);```
+
+2. About pointer's:
+
+[Watch video](https://www.youtube.com/watch?v=nIY1fBkGQq4) - it's help you.
+Then, need understand, why I use pointers? Don't remember - `Allowed functions : None`
+
+For check result, I was used:
+
+```c
+int main()
+{
+  int a	= 1;
+  int b	= 2;
+
+  ft_swap(&a, &b);
+  return(0);
+}
+```
+
+---
+3. Result:
+
+```c
+void ft_swap(int *a, int *b)
+{
+  char c;
+  c = *a;
+  *a = *b;
+  *b = c;
+}
+```
+
 ## XV Exercise 11 : ft_div_mod
 ## XVI Exercise 12 : ft_iterative_factorial
 ## XVII Exercise 13 : ft_recursive_factorial
