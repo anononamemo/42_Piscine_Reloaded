@@ -114,6 +114,31 @@ $>
 > p.s. Simple - `''` or `echo 42 > '"\?$*’KwaMe’*$?\"'`
 
 ### X Exercise 06 : ft_print_alphabet
+1. Task:
+
+> Create a function that displays the alphabet in lowercase, on a single line, by ascending order, starting from the letter ’a’.
+
+2. Classic
+
+```c
+void ft_putchar(char c)
+{
+  write(1, &c, 1);
+}
+```
+
+---
+3. Result:
+
+```c
+void ft_print_alphabet(void)
+{
+  int i = 97;
+  while (i >= 97 && i <= 122)
+    ft_putchar(i++);
+  ft_putchar('\n');
+}
+```
 
 ### XI Exercise 07 : ft_print_numbers
 ### XII Exercise 03: ft_is_negative
