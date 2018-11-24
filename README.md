@@ -286,92 +286,46 @@ void ft_swap(int *a, int *b)
 > Create a function ft_div_mod prototyped like this :
 >	`void ft_div_mod(int a, int b, int *div, int *mod);`
 >
->This function divides parameters a by b and stores the result in the int pointed by div. It also stores the remainder of the division of a by b in the int pointed by mod.
 
-2. About div & standart operation in C
+> This function divides parameters a by b and stores the result in the int pointed by div. It also stores the remainder of the division of a by b in the int pointed by mod.
 
-===Arithmetic operators===
-{| class="wikitable" style="width:100%"
-! colspan="2" rowspan="2" | Operator name
-! rowspan="2" | Syntax
-! rowspan="2" | Can overload in C++
-! rowspan="2" | Included<br/>in [[C (programming language)|C]]
-! colspan="2" | C++ prototype examples
-|-
-! As member of K
-! Outside class definitions
-|-
-| {{rh}} colspan="2" | [[Assignment operator in C++|Basic assignment]] 
-| style="text-align:center;" | <code>a '''=''' b</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R& K::operator =(S b);}}
-| {{n/a}}
-|-
-| {{rh}} colspan="2" | [[Addition]] 
-| style="text-align:center;" | <code>a '''+''' b</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R K::operator +(S b);}}
-| {{cpp|1=R operator +(K a, S b);}}
-|-
-| {{rh}} colspan="2" | [[Subtraction]]
-| style="text-align:center;" | <code>a '''-''' b</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R K::operator -(S b);}}
-| {{cpp|1=R operator -(K a, S b);}}
-|- 
-| {{rh}} colspan="2" | [[Unary operation|Unary]] plus ([[Type conversion#Type promotion|integer promotion]])
-| style="text-align:center;" | <code>'''+'''a</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R K::operator +();}}
-| {{cpp|1=R operator +(K a);}}
-|-
-| {{rh}} colspan="2" | Unary minus ([[additive inverse]]) 
-| style="text-align:center;" | <code>'''-'''a</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R K::operator -();}}
-| {{cpp|1=R operator -(K a);}}
-|-
-| {{rh}} colspan="2" | [[Multiplication]]
-| style="text-align:center;" | <code>a '''*''' b</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R K::operator *(S b);}}
-| {{cpp|1=R operator *(K a, S b);}}
-|-
-| {{rh}} colspan="2" | [[Division (mathematics)|Division]]
-| style="text-align:center;" | <code>a '''/''' b</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R K::operator /(S b);}}
-| {{cpp|1=R operator /(K a, S b);}}
-|-
-| {{rh}} colspan="2" | [[Modulo operation|Modulo]] (integer remainder)<ref name="modulo" group="lower-alpha" />
-| style="text-align:center;" | <code>a '''%''' b</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R K::operator %(S b);}}
-| {{cpp|1=R operator %(K a, S b);}}
-|-
-| width="15%" {{rh}} rowspan="3" | [[Increment and decrement operators|Increment]]
-| width="8%" {{rh}} | Prefix
-| width="11%" align="center" | <code>'''++'''a</code>
-| width="8%" {{yes}}
-| width="8%" {{yes}}
-| width="25%" | {{cpp|1=R& K::operator ++();}}
-| width="25%" | {{cpp|1=R& operator ++(K& a);}}
-|-
-| {{rh}} rowspan="2" | Postfix
-| rowspan="2" style="text-align:center;" | <code>a'''++'''</code> 
-| rowspan="2" {{yes}} 
-| rowspan="2" {{yes}} 
-| {{cpp|1=R K::operator ++(int);}}
-| {{cpp|1=R operator ++(K& a, int);}}
-|-
-| {{rh}} colspan="2" style="font-size:smaller;" | Note: [[C++]] uses the unnamed dummy-parameter {{cpp|int}} to differentiate between prefix and postfix increment operators.
-|-
-| {{rh}} rowspan="3" | [[Increment and decrement operators|Decrement]]
-| {{rh}} | Prefix
-| style="text-align:center;" | <code>'''--'''a</code> || {{yes}} || {{yes}} 
-| {{cpp|1=R& K::operator --();}}
-| {{cpp|1=R& operator --(K& a);}}
-|-
-| {{rh}} rowspan="2" | Postfix
-| rowspan="2" style="text-align:center;" | <code>a'''--'''</code> || rowspan="2" {{yes}} || rowspan="2" {{yes}} 
-| {{cpp|1=R K::operator --(int);}}
-| {{cpp|1=R operator --(K& a, int);}}
-|-
-| {{rh}} colspan="2" style="font-size:smaller;" | Note: [[C++]] uses the unnamed dummy-parameter {{cpp|int}} to differentiate between prefix and postfix decrement operators.
-|}
+2. About div & [standart operation in C](https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B)
 
+| Operator name	| Syntax        | C++ prototype examples |
+| ------------- |:-------------:| ----------------------:|
+| Multiplication| a * b         | `K::operator *(S b);`  |
+| Division      | a / b         | `K::operator /(S b);`  |
+| Modulo        | a % b         | `R K::operator %(S b);`|
+
+2.1 For check this exercise:
+```c
+int main()
+{
+  int a = 41;
+  int b = 11;
+  int *div;
+  int *mod;
+
+  ft_div_mod(a, b, div, mod);
+
+  printf("%d\n", *div);
+  printf("%d\n", *mod);
+
+  return(0);
+}
+```
+> don't remember about `#include <stdio.h>`
+
+---
+3. Result
+
+```c
+void ft_div_mod(int a, int b, int *div, int *mod)
+{
+  *div = a / b;
+  *mod = a % b;
+}
+```
 
 ## XVI Exercise 12 : ft_iterative_factorial
 ## XVII Exercise 13 : ft_recursive_factorial
