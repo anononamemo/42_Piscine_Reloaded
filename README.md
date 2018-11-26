@@ -1,4 +1,4 @@
-# 42_Piscine_Reloaded
+># 42_Piscine_Reloaded
 
 *The Piscine was good but the time has past. This serie of exercises will help you to
 remind all the basics you’ve learned during the piscine. Functions, loops, pointers, structures, let’s remind together the syntactic and semantic bases of the C*
@@ -328,6 +328,48 @@ void ft_div_mod(int a, int b, int *div, int *mod)
 ```
 
 ## XVI Exercise 12 : ft_iterative_factorial
+
+1. Task:
+
+> Create an iterated function that returns a number. This number is the result of a factorial operation based on the number given as a parameter.
+
+> If there’s an error, the function should return 0.
+
+> Here’s how it should be prototyped :
+> ```c int ft_iterative_factorial(int nb);```
+
+> Your function must return its result in less than two seconds.
+
+2. About factorial:
+
+```math
+7! = 1 * 2 * 3 * 4 * 5 * 6 * 7
+0! = 1
+```
+
+---
+3. Result:
+
+```c
+int ft_iterative_factorial(int nb)
+{
+  int res;
+  int i;
+
+  res =	1;
+  i = 1;
+
+  if (nb >= 0 && nb <= 12)
+    {
+      while (i <= nb)
+        res *= i++;
+      return(res);
+    }
+  else
+    return(0);
+}
+```
+
 ## XVII Exercise 13 : ft_recursive_factorial
 ## XVIII Exercise 14 : ft_sqrt
 ## XIX Exercise 15 : ft_putstr
