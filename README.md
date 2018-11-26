@@ -371,6 +371,38 @@ int ft_iterative_factorial(int nb)
 ```
 
 ## XVII Exercise 13 : ft_recursive_factorial
+
+1. Task:
+
+> Reproduce the behavior of the function strlen (man strlen).
+> Here’s how it should be prototyped:
+```c
+ int ft_strlen(char *str);
+```
+
+2. Me help's watch this video:[Рекурсия. Репка и матрёшка](https://www.youtube.com/)
+
+---
+3. Result:
+
+```c
+int ft_recursive_factorial(int nb)
+{
+  if (nb == 0)
+    return(1);
+  else if (nb < 0 || nb > 12)
+    return(0);
+  else
+    {
+      c = c * nb;
+      ft_recursive_factorial(nb -1);
+    }
+  return (c);
+}
+```
+
+> p.s. Check this: `else if (nb < 0 || nb > 12)`, maybe is worth?
+
 ## XVIII Exercise 14 : ft_sqrt
 ## XIX Exercise 15 : ft_putstr
 ## XX Exercise 16 : ft_strlen
