@@ -401,9 +401,45 @@ int ft_recursive_factorial(int nb)
 }
 ```
 
-> p.s. Check this: `else if (nb < 0 || nb > 12)`, maybe is worth?
+> p.s. Check this: `else if (nb < 0 || nb > 12)`, maybe is LYING?
+> p.s.s. use global value.
 
 ## XVIII Exercise 14 : ft_sqrt
+
+1. Task:
+
+> Create a function that returns the square root of a number (if it exists), or 0 if the square root is an irrational number.
+> Here’s how it should be prototyped :
+
+```c
+int ft_sqrt(int nb);
+```
+
+> Your function must return its result in less than two seconds.
+
+2. About square, watch video [Быстрое вычисление квадратных корней](https://www.youtube.com/watch?v=UvKJGxvlDt4)
+
+3. Result:
+
+```c
+
+int ft_sqrt(int nb)
+{
+  int i = 1;
+
+  if (nb < 0 || nb >= 32767)
+    return(0);
+  else
+    {
+      while (i < nb && (i * i) < nb)
+      	    i++;
+    }
+  return (i);
+}
+```
+
+> p.s. Rememder about `int` -  ` if (nb < 0 || nb >= 32767)`
+
 ## XIX Exercise 15 : ft_putstr
 ## XX Exercise 16 : ft_strlen
 ## XXI Exercise 17 : ft_strcmp

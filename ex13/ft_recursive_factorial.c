@@ -1,3 +1,5 @@
+int c;
+
 int ft_recursive_factorial(int nb)
 {
   if (nb == 0)
@@ -7,7 +9,7 @@ int ft_recursive_factorial(int nb)
   else
     {
       c = c * nb;
-      ft_recursive_factorial(nb -1);
+      ft_recursive_factorial(nb - 1);
     }
   return (c);
 }
