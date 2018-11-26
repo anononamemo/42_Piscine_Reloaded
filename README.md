@@ -419,6 +419,8 @@ int ft_sqrt(int nb);
 
 2. About square, watch video [Быстрое вычисление квадратных корней](https://www.youtube.com/watch?v=UvKJGxvlDt4)
 
+---
+
 3. Result:
 
 ```c
@@ -441,6 +443,18 @@ int ft_sqrt(int nb)
 > p.s. Rememder about `int` -  ` if (nb < 0 || nb >= 32767)`
 
 ## XIX Exercise 15 : ft_putstr
+
+Classic:
+
+```c
+#include <unistd.h>
+
+void ft_putstr(char *str)
+{
+  while (*str)
+    write(1, str++, 1);
+}
+```
 ## XX Exercise 16 : ft_strlen
 ## XXI Exercise 17 : ft_strcmp
 ## XXII Exercise 18 : ft_print_params
