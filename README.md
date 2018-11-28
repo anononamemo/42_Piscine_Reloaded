@@ -1,4 +1,4 @@
-># 42_Piscine_Reloaded
+# 42_Piscine_Reloaded
 
 *The Piscine was good but the time has past. This serie of exercises will help you to
 remind all the basics you’ve learned during the piscine. Functions, loops, pointers, structures, let’s remind together the syntactic and semantic bases of the C*
@@ -456,6 +456,36 @@ void ft_putstr(char *str)
 }
 ```
 ## XX Exercise 16 : ft_strlen
+
+Classic:
+
+``` c
+int ft_strlen(char *str)
+{
+  int len = 0;
+
+  while (*str)
+    {
+      len++;
+      str++;
+    }
+  return(len);
+}
+```
+
+Check this:
+
+```c
+int main()
+{
+  char str[] = "Hello world";
+  printf("Len of %s = %d\n", str, ft_strlen(str));
+  return(0);
+}
+```
+
+> p.s., don't remember about: `#include <stdio.h>`
+
 ## XXI Exercise 17 : ft_strcmp
 ## XXII Exercise 18 : ft_print_params
 ## XXIII Exercise 19 : ft_sort_params

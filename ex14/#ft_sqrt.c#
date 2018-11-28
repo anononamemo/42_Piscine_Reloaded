@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int ft_sqrt(int nb)
+{
+  int i = 1;
+  
+  while (i < nb && (i * i) <= nb)
+    {
+      i++;
+    }
+  return (i);
+}
+
+int main()
+{
+  printf("%d\n", ft_sqrt(9));
+  return(0);
+}
