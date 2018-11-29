@@ -530,7 +530,7 @@ STRCMP (const char *p1, const char *p2)
 }
 ```
 
-Note this: return only value c1 - c2;
+> Note this: return only value c1 - c2;
 
 3. Result:
 
@@ -568,11 +568,48 @@ int main()
 
 > p.s., don't remember about: `#include <stdio.h>`, if you want check this exercize
 
-
-
 ## XXII Exercise 18 : ft_print_params
+
+1. Task:
+
+```bash
+$>./a.out test1 test2 test3
+test1 test2
+test3 $>
+```
+
+DO IT!
+
+2. Result:
+
+```c
+#include <unistd.h>
+
+void ft_putchar(char c)
+{
+  write(1, &c, 1);
+}
+
+void ft_putstr(char *str)
+{
+  while	(*str)
+    ft_putchar(*str++);
+  ft_putchar('\n');
+}
+
+int main(int argc, char **argv)
+{
+  int i = 1;
+
+  if (argc > 0)
+      while(argv[i])
+          ft_putstr(argv[i++]);
+  return(0);
+}
+```
+
 ## XXIII Exercise 19 : ft_sort_params
-## XXIV Exercise 20 : ft_strdup
+## CXXIV Exercise 20 : ft_strdup
 ## XXV Exercise 21 : ft_range
 ## XXVI Exercise 22 : ft_abs.h
 ## XXVIIExercise 23 : ft_point.h
