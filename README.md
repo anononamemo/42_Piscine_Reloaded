@@ -484,9 +484,92 @@ int main()
 }
 ```
 
-> p.s., don't remember about: `#include <stdio.h>`
+> p.s., don't remember about: `#include <stdio.h>`, if you want check this exercize
 
 ## XXI Exercise 17 : ft_strcmp
+
+1. About strcmp:
+
+``` bash
+DESCRIPTION
+     The strcmp() and strncmp() functions lexicographically compare the null-
+     terminated strings s1 and s2.
+
+     The strncmp() function compares not more than n characters.  Because
+     strncmp() is designed for comparing strings rather than binary data,
+     characters that appear after a `\0' character are not compared.
+
+RETURN VALUES
+     The strcmp() and strncmp() functions return an integer greater than,
+     equal to, or less than 0, according as the string s1 is greater than,
+     equal to, or less than the string s2.  The comparison is done using
+     unsigned characters, so that `\200' is greater than `\0'.
+```
+
+2. Source of strcmp:
+
+```c
+/* Compare S1 and S2, returning less than, equal to or
+   greater than zero if S1 is lexicographically less than,
+   equal to or greater than S2.  */
+int
+STRCMP (const char *p1, const char *p2)
+{
+  const unsigned char *s1 = (const unsigned char *) p1;
+  const unsigned char *s2 = (const unsigned char *) p2;
+  unsigned char c1, c2;
+  do
+    {
+      c1 = (unsigned char) *s1++;
+      c2 = (unsigned char) *s2++;
+      if (c1 == '\0')
+        return c1 - c2;
+    }
+  while (c1 == c2);
+  return c1 - c2;
+}
+```
+
+Note this: return only value c1 - c2;
+
+3. Result:
+
+```c
+int ft_strcmp(char *s1, char *s2)
+{
+  int lenS1 = 0;
+  int lenS2 = 0;
+  while (*s1)
+    {
+      lenS1++;
+      s1++;
+    }
+  while	(*s2)
+    {
+      lenS2++;
+      s2++;
+    }
+
+  return (lenS2 - lenS1);
+}
+```
+
+> How to check this?
+
+```c
+int main()
+{
+  char str1[] = "Hello world";
+  char str2[] = "World Hello1";
+  printf("%d\n", ft_strcmp(str1, str2));
+  return(0);
+}
+```
+
+> p.s., don't remember about: `#include <stdio.h>`, if you want check this exercize
+
+
+
 ## XXII Exercise 18 : ft_print_params
 ## XXIII Exercise 19 : ft_sort_params
 ## XXIV Exercise 20 : ft_strdup
