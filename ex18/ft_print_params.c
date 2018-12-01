@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 {
   int i = 1;
   
-  if (argc > 0)
+  if (argc > 1)
       while(argv[i])
 	  ft_putstr(argv[i++]);
   return(0);

@@ -601,14 +601,27 @@ int main(int argc, char **argv)
 {
   int i = 1;
 
-  if (argc > 0)
+  if (argc > 1)
       while(argv[i])
           ft_putstr(argv[i++]);
   return(0);
 }
 ```
 
+> p.s. - use `(argc > 1)`, remember about this!
+
 ## XXIII Exercise 19 : ft_sort_params
+
+1. Task:
+
+```
+> • We’re dealing with a program here, you should therefore have a function main in your .c file.
+> • Create a program that displays its given arguments sorted by ascii order.
+> • It should display all arguments, except for argv[0].
+> • All arguments have to have their own line.
+
+
+
 ## CXXIV Exercise 20 : ft_strdup
 ## XXV Exercise 21 : ft_range
 ## XXVI Exercise 22 : ft_abs.h
